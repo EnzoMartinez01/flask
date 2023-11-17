@@ -2,20 +2,27 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     margin: 0;
-    padding: 20px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 0;
+    justify-content: center;
     align-items: center;
+    height: 100vh; /* Ajustar la altura al 100% de la ventana */
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: .2em;
 }
 
 h1 {
     color: black;
+    font-size: 3em;
 }
 
 #userInput {
-    padding: 10px;
+    padding: 1em;
     margin: 10px;
 }
 
@@ -24,12 +31,15 @@ button {
     cursor: pointer;
 }
 
+p{
+    font-size: 1.25em;
+}
+
 #botResponse {
     margin-top: 20px;
-    
     height: 300px;
     overflow-y: scroll;
-    border: 1px solid black;
+    background-color: aliceblue;
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -40,29 +50,33 @@ button {
 }
 
 #chat-container {
-    width: 400px;
-    margin: 0 auto;
+    width: 50%;
+    margin: 0 10px;
     padding: 20px;
-    border: 1px solid black;
     border-radius: 5px;
+    margin: auto;
     background-color: white;
     font-family: Arial, sans-serif;
     text-align: center;
 }
 #userInput {
-    width: 100%;
-    padding: 8px;
+    width: calc(100% - 20px);
     box-sizing: border-box;
+    font-size: 1em;
 }
 #send-button {
-    width: 100%;
-    padding: 8px;
+    /*width: 100%;*/
+    width: calc(100% - 20px);
+    font-size:1.5em;
+    padding: 1em;
     box-sizing: border-box;
     margin-top: 5px;
+    margin-bottom: 15px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 3px;
+    border-radius:.5em;
+    width: 200px;
     cursor: pointer;
 }
 
@@ -76,13 +90,17 @@ button {
 }
 
 #examples-container {
-    max-width: 30%; /* Ajusta según tus necesidades */
+    width: 50%;
+    border-radius: 5px;
+    background-color: rgb(158, 226, 253);
 }
 
 #examples-heading {
     font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 10px;
+    padding: 2em;
+    width: 80%;
+    margin: auto;
 }
 
 .example {

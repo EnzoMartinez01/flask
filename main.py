@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import json
+import os
 from difflib import get_close_matches
 
 app = Flask(__name__, static_folder='static')
@@ -16,7 +17,7 @@ def ask():
     user_question = request.form['user_question']
     palabras_prohibidas_encontradas = [palabra for palabra in banned_words if palabra in user_question.lower()]
     if palabras_prohibidas_encontradas:
-        return jsonify({'answer': f'Bot: Has sido vetado por usar palabras prohibidas: {", ".join(palabras_prohibidas_encontradas)}'})
+        return jsonify({'answer': f' Has sido vetado por usar palabras prohibidas: {", ".join(palabras_prohibidas_encontradas)}'})
 
     best_match = find_best_match(user_question)
     

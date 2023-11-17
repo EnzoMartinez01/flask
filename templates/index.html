@@ -6,35 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatBot</title>
     <link rel="stylesheet" href="static/css/index.css">
-    <style>
-        body {
-            background-image: url('static/image/chatbot-bg.jpg');
-            background-size: cover;
-        }
-    </style>
 </head>
 
 <body>
-    <div id="chat-container">
-        <h1>ChatBot Certus G3</h1>
-        <p id="instructions">Escribe una pregunta y presiona "Enviar". No se permiten malas palabras.</p>
-        <p id="botResponse">Bot: ¡Hola! Soy un chatbot. Escribe una pregunta para comenzar.</p>
-        <input type="text" id="userInput" placeholder="Escribe una pregunta...">
-        <button id="send-button" onclick="ask()">Enviar</button>
-        <button id="saveButton" style="display: none;" onclick="saveNewAnswer()">Guardar respuesta</button>    
-    </div>
-
-    <div id="examples-container">
-        <h2 id="examples-heading">Ejemplos de Uso:</h2>
-        <div class="example">
-            <p>Ejemplo 1: ¿Cómo estás?</p>
+    <nav class="container">
+        <div id="chat-container">
+            <h1>ChatBot Certus G3</h1>
+            <p id="instructions">Escribe una pregunta y presiona "Enviar". No se permiten malas palabras.</p>
+            <p id="botResponse">Bot: ¡Hola! Soy un chatbot. Escribe una pregunta para comenzar.</p>
+            <input type="text" id="userInput" placeholder="Escribe una pregunta...">
+            <button id="send-button" onclick="ask()">Enviar</button>
+            <button id="saveButton" style="display: none;" onclick="saveNewAnswer()">Guardar respuesta</button>    
         </div>
-        <div class="example">
-            <p>Ejemplo 2: ¿Cuántas sedes tiene CERTUS?.</p>
+        <div id="examples-container">
+            <h2 id="examples-heading">Ejemplos de Uso:</h2>
+            <div class="example">
+                <p>Ejemplo 1: "¿Cómo estás?"</p>
+            </div>
+            <div class="example">
+                <p>Ejemplo 2: "¿Cuántas sedes tiene CERTUS?"".</p>
+            </div>
+            <h2 id="examples-heading">También puedes entrenar al Bot haciendole nuevas preguntas que no sepa y agregando respuestas de acuerdo a la pregunta:</h2>
+            <div class="example">
+                <p>Ejemplo pregunta nueva: "¿Sabés inglés?"</p>
+            </div>
+            <div class="example">
+                <p>Ejemplo respuesta acorde a la pregunta: "No sé inglés, lo siento."</p>
+            </div>
+            <div class="example">
+                <p>Dar click en el boton "Guardar respuesta", y volver hacer la misma pregunta.</p>
+            </div>
         </div>
-        <!-- Agrega más ejemplos según sea necesario -->
-    </div>
-
+    </nav>
     <script>
         async function ask() {
             const userInput = document.getElementById('userInput').value;

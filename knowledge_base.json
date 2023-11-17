@@ -303,6 +303,14 @@
     {
       "texto": "palta?",
       "respuesta": "si"
+    },
+    {
+      "texto": "No sé inglés. Lo siento.",
+      "respuesta": "null"
+    },
+    {
+      "texto": "como veo mi certificado",
+      "respuesta": "Lo puedes solicitar a través del correo institucional o acercandote presencialmente"
     }
   ]
 }
